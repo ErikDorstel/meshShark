@@ -3,7 +3,7 @@ ESP32 based Meshtastic LoRa Header Sniffer
 #### Features
 * works with Heltec WiFi LoRa 32 (V2) and (V3) modules
 * suitable for comparing or aligning antennas
-* displays reception field strength and signal-to-noise ratio
+* displays receiver field strength and signal-to-noise ratio
 * console output of the header attributes of the received packets
 #### display output
 ![IMAGE ALT TEXT HERE](documentation/meshSharkDisplay.png)
