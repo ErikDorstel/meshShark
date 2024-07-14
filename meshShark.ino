@@ -1,5 +1,11 @@
+// ------ configuration header ------
 //#define HELTECV2
 #define HELTECV3
+#define loraFrequency 869525000
+#define loraSpreadingFactor 11
+#define loraBandwidth 250000
+#define loraCodingRate 5
+// ------ configuration header ------
 
 #ifdef HELTECV2
   #include <SX127x.h> // LoRaRF Arduino Library https://github.com/chandrawi/LoRaRF-Arduino
@@ -55,8 +61,8 @@ void setup() {
   LoRa.setDio3TcxoCtrl(SX126X_DIO3_OUTPUT_1_8,SX126X_TCXO_DELAY_10);
   LoRa.setRegulator(SX126X_REGULATOR_LDO);
 #endif
-  LoRa.setFrequency(869525000);
-  LoRa.setLoRaModulation(11,250000,5,false);
+  LoRa.setFrequency(loraFrequency);
+  LoRa.setLoRaModulation(loraSpreadingFactor,loraBandwidth,loraCodingRate,false);
   LoRa.setLoRaPacket(LORA_HEADER_EXPLICIT,16,32,true,false);
   LoRa.setSyncWord(syncWord);
 #ifdef HELTECV2
